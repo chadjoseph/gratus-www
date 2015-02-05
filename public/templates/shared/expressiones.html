@@ -1,0 +1,13 @@
+<section id="expressiones">
+  <ol>
+    <li data-ng-repeat="expressio in model.expressiones">
+      <ng-include src="'templates/shared/expressio.html'"></ng-include>
+    </li>
+    <li data-ng-if="::!model.expressiones.length">
+      <p>
+        No expressiōnēs for /{{::model.query}}.
+      </p>
+    </li>
+  </ol>
+</section>
+

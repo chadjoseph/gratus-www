@@ -1,0 +1,31 @@
+<section id="exprimo">
+  <form data-ng-submit="submit()"
+        name="form"
+        novalidate>
+    <fieldset>
+      <textarea data-ng-class="{message:expressioMessage()}"
+                data-ng-maxlength="{{::validation.expressio.maxlength}}"
+                data-ng-minlength="{{::validation.expressio.minlength}}"
+                data-ng-model="model.expressio"
+                data-ng-model-options="{ debounce: { default: 500, blur: 0 } }"
+                data-ng-pattern="{{::validation.expressio.pattern}}"
+                name="expressio"
+                placeholder="expressiō"
+                rows="4"
+                required>
+      </textarea>
+    </fieldset>
+    <fieldset>
+      <ul data-ng-if="messages()">
+        <li data-ng-if="expressioMessage()"
+            data-ng-messages="form.expressio.$error"
+            data-ng-messages-include="templates/messages/expressio.html">
+        </li>
+      </ul>
+      <button data-ng-if="!messages()" type="submit">
+        exprimō
+      </button>
+    </fieldset>
+  </form>
+</section>
+

@@ -1,0 +1,30 @@
+<section id="persona">
+  <figure data-ng-if="::model.doc">
+    <img data-ng-src="http://www.gravatar.com/avatar/{{::model.doc.gravatar}}?s=198"
+         height="198"
+         width="198">
+    <figcaption>
+      <dl>
+        <dt>
+          Name
+        </dt>
+        <dd>
+          {{::model.doc.name}}
+        </dd>
+        <dt>
+          Persona
+        </dt>
+        <dd>
+          :{{::model.doc.persona}}
+        </dd>
+      </dl>
+    </figcaption>
+  </figure>
+  <p data-ng-if="::!model.doc">
+    No persona for :{{::model.persona}}.
+  </p>
+</section>
+
+<ng-include data-ng-if="::model.doc"
+            src="'templates/shared/expressiones.html'"></ng-include>
+

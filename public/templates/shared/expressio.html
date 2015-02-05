@@ -1,0 +1,33 @@
+<!--<aside data-ng-if="::!model.doc">-->
+<!--<a data-ng-href="#/:{{::expressio.persona}}">-->
+<!--<img data-ng-src="http://www.gravatar.com/avatar/{{::expressio.gravatar}}?s=122"-->
+<!--height="122"-->
+<!--width="122">-->
+<!--</a>-->
+<!--</aside>-->
+<article>
+  <!--<header>-->
+  <!--<a data-ng-href="#/{{::expressio.id}}">expressiō</a>-->
+  <!--</header>-->
+  <a data-ui-sref="expressiones.show({ query: expressio.id })">
+    <blockquote>
+      <p>
+        {{::expressio.expressio | gratusHtml}}
+      </p>
+      <cite>
+        <!--<a data-ng-href="#/:{{::expressio.persona}}">-->
+          {{::expressio.name}}
+        <!--</a>-->
+      </cite>
+    </blockquote>
+  </a>
+  <!--<footer>-->
+  <!--<address>-->
+  <!--<a data-ng-href="#/:{{::expressio.persona}}">-->
+  <!--<b>{{::expressio.persona}}</b>-->
+  <!--</a>-->
+  <!--</address>-->
+  <!--<time>{{::expressio.date | gratusAgo}}</time>-->
+  <!--</footer>-->
+</article>
+

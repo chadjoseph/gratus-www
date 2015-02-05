@@ -1,0 +1,11 @@
+<nav>
+  <ul>
+    <li data-ng-show="!session.token"><a
+        data-ui-sref="personas.login">login</a></li>
+    <li data-ng-show="session.token"><a
+        data-ng-click="logout()">logout</a></li>
+    <li data-ng-show="!session.token"><a
+        data-ui-sref="personas.join">join</a></li>
+  </ul>
+</nav>
+

@@ -1,0 +1,87 @@
+<section id="join">
+  <form data-gratus-blur-on="form.submitted"
+        data-ng-submit="submit()"
+        name="form"
+        novalidate>
+    <fieldset>
+      <input autocapitalize="off"
+             autocomplete="off"
+             autocorrect="off"
+             data-gratus-unique
+             data-ng-class="{message:personaMessage()}"
+             data-ng-maxlength="{{::validation.persona.maxlength}}"
+             data-ng-minlength="{{::validation.persona.minlength}}"
+             data-ng-model="model.persona"
+             data-ng-model-options="{ debounce: { default: 500, blur: 0 } }"
+             data-ng-pattern="{{::validation.persona.pattern}}"
+             name="persona"
+             placeholder="persona"
+             type="text"
+             required>
+      <input autocapitalize="off"
+             autocomplete="off"
+             autocorrect="off"
+             data-ng-class="{message:passwordMessage()}"
+             data-ng-maxlength="{{::validation.password.maxlength}}"
+             data-ng-minlength="{{::validation.password.minlength}}"
+             data-ng-pattern="{{::validation.password.pattern}}"
+             data-ng-model="model.password"
+             data-ng-model-options="{ debounce: { default: 500, blur: 0 } }"
+             name="password"
+             placeholder="password"
+             type="password"
+             required>
+      <input autocapitalize="off"
+             autocomplete="off"
+             autocorrect="off"
+             data-ng-class="{message:nameMessage()}"
+             data-ng-maxlength="{{::validation.name.maxlength}}"
+             data-ng-minlength="{{::validation.name.minlength}}"
+             data-ng-model="model.name"
+             data-ng-model-options="{ debounce: { default: 500, blur: 0 } }"
+             data-ng-pattern="{{::validation.name.pattern}}"
+             name="name"
+             placeholder="name"
+             type="text"
+             required>
+      <input autocapitalize="off"
+             autocomplete="off"
+             autocorrect="off"
+             data-gratus-unique
+             data-ng-class="{message:emailMessage()}"
+             data-ng-maxlength="{{::validation.email.maxlength}}"
+             data-ng-minlength="{{::validation.email.minlength}}"
+             data-ng-model="model.email"
+             data-ng-model-options="{ debounce: { default: 500, blur: 0 } }"
+             data-ng-pattern="{{::validation.email.pattern}}"
+             name="email"
+             placeholder="email"
+             type="email"
+             required>
+    </fieldset>
+    <fieldset>
+      <ul data-ng-if="messages()">
+        <li data-ng-if="personaMessage()"
+            data-ng-messages="form.persona.$error"
+            data-ng-messages-include="templates/messages/persona.html">
+        </li>
+        <li data-ng-if="passwordMessage()"
+            data-ng-messages="form.password.$error"
+            data-ng-messages-include="templates/messages/password.html">
+        </li>
+        <li data-ng-if="nameMessage()"
+            data-ng-messages="form.name.$error"
+            data-ng-messages-include="templates/messages/name.html">
+        </li>
+        <li data-ng-if="emailMessage()"
+            data-ng-messages="form.email.$error"
+            data-ng-messages-include="templates/messages/email.html">
+        </li>
+      </ul>
+      <button data-ng-if="!messages()" type="submit">
+        join
+      </button>
+    </fieldset>
+  </form>
+</section>
+

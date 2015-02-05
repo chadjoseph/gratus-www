@@ -1,0 +1,456 @@
+* {
+  border: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+html {
+  background: url('../img/background.jpg') no-repeat fixed;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+body {
+  bottom: 0;
+  box-sizing: border-box;
+  color: rgb(55, 55, 55);
+  font-family: 'body-sans-serif', sans-serif;
+  font-size: 62.5%;
+  left: 0;
+  line-height: 3em;
+  overflow: hidden;
+  padding: 21px 0 68px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.77);
+  color: rgb(102, 102, 102);
+  font-family: 'nav-sans-serif', sans-serif;
+  line-height: 4.05em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.77);
+  bottom: 0;
+  height: 67px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+footer nav {
+  line-height: 6.6em;
+  text-align: center;
+}
+
+footer nav li {
+  float: left;
+  width: 33%;
+}
+
+footer nav ul:after {
+  clear: left;
+  content: '';
+  display: block;
+}
+
+form {
+  position: relative;
+}
+
+form fieldset button.ng-leave,
+form fieldset li.ng-leave,
+form fieldset p.ng-leave,
+form fieldset ul.ng-leave {
+  -webkit-animation: fade-out 0.25s linear;
+}
+
+form fieldset button.ng-enter,
+form fieldset li.ng-enter,
+form fieldset p.ng-enter,
+form fieldset ul.ng-enter {
+  -webkit-animation: fade-in 0.25s linear;
+}
+
+form fieldset {
+  border: 22px solid rgba(255, 255, 255, 0.77);
+  margin-bottom: 1px;
+}
+
+form fieldset:last-of-type {
+  height: 44px;
+  overflow: hidden;
+}
+
+form fieldset li {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+form fieldset mark {
+  background-color: inherit;
+  color: inherit;
+}
+
+form fieldset p {
+  background-color: rgba(231, 55, 66, 0.77);
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  line-height: 4.4em;
+  padding: 0 22px;
+  position: absolute;
+  width: 100%;
+}
+
+form fieldset ul {
+  height: 100%;
+  position: relative;
+}
+
+h1 {
+  font-family: 'heading-serif', serif;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.77);
+  height: 20px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+input,
+textarea {
+  background-color: rgba(255, 255, 255, 0.77);
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: rgb(154, 154, 154);
+  display: block;
+  font-family: 'body-sans-serif', sans-serif;
+  line-height: 3.4em;
+  resize: none;
+  width: 100%;
+}
+
+input.message,
+textarea.message {
+  border-bottom-color: rgba(231, 55, 66, 0.77);
+}
+
+input.message-add,
+textarea.message-add {
+  -webkit-animation: fade-in-border 0.25s linear;
+}
+
+input.message-remove,
+textarea.message-remove {
+  -webkit-animation: fade-out-border 0.25s linear;
+}
+
+nav {
+  font: 1.1em/4.4em 'nav-sans-serif', sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: rgb(102, 102, 102);
+  display: block;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+#content {
+  -webkit-overflow-scrolling: touch;
+  height: 479px;
+  overflow: scroll;
+  position: relative;
+  width: 320px;
+}
+
+#content.ng-leave {
+  position: absolute;
+  top: 21px;
+}
+
+#content.ng-enter {
+  -webkit-animation: slide-in-left 0.25s ease-in-out;
+}
+
+#content.ng-leave {
+  -webkit-animation: slide-out-right 0.25s ease-in-out;
+}
+
+#content nav {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+#content nav a {
+  padding: 0 22px;
+  position: relative;
+}
+
+#content nav a:after,
+#content nav a:before,
+#expressiones article a:after,
+#expressiones article a:before {
+  background-color: rgb(102, 102, 102);
+  content: '';
+  display: block;
+  height: 15px;
+  position: absolute;
+  right: 22px;
+  width: 2px;
+}
+
+#content nav a:after,
+#expressiones article a:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 20px;
+}
+
+#content nav a:before,
+#expressiones article a:before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+#content nav li {
+  background-color: rgba(0, 0, 0, 0.77);
+  height: 44px;
+  margin-bottom: 1px;
+}
+
+#content nav ul {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+}
+
+#content nav ul:after {
+  content: '';
+  display: block;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.77);
+}
+
+#expressiones article {
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  height: 119px;
+  margin-bottom: 1px;
+}
+
+#expressiones article a {
+  color: rgb(255, 255, 255);
+  display: block;
+  padding: 0 44px 0 22px;
+  position: relative;
+  text-decoration: none;
+}
+
+#expressiones article a:after,
+#expressiones article a:before {
+  background-color: rgb(255, 255, 255);
+}
+
+#expressiones article a:after {
+  top: 55px;
+}
+
+#expressiones article a:before {
+  top: 45px;
+}
+
+#expressiones ol li:nth-of-type(4n + 1) article {
+  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.55), rgba(255, 255, 0, 0.55));
+}
+
+#expressiones ol li:nth-of-type(4n + 2) article {
+  background-image: linear-gradient(45deg, rgba(255, 255, 0, 0.55), rgba(0, 255, 0, 0.55));
+}
+
+#expressiones ol li:nth-of-type(4n + 3) article {
+  background-image: linear-gradient(45deg, rgba(0, 255, 0, 0.55), rgba(0, 0, 255, 0.55));
+}
+
+#expressiones ol li:nth-of-type(4n + 4) article {
+  background-image: linear-gradient(45deg, rgba(0, 0, 255, 0.55), rgba(255, 0, 0, 0.55));
+}
+
+#expressiones ol li:last-of-type article {
+  margin-bottom: 0;
+}
+
+#expressiones aside {
+  background-color: rgb(242, 242, 242);
+  margin-top: -22px;
+}
+
+#expressiones aside a {
+  display: block;
+}
+
+#expressiones aside img {
+  display: block;
+  margin: 22px auto 22pt;
+}
+
+#expressiones blockquote {
+  font-family: 'blockquote-sans-serif', sans-serif;
+  font-size: 1.3em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#expressiones blockquote cite {
+  display: block;
+  text-align: right;
+}
+
+#expressiones blockquote cite:before {
+  content: '\2014';
+}
+
+#expressiones blockquote p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#expressiones blockquote p:before {
+  color: rgba(255, 255, 255, 0.90);
+  content: '\201C';
+  display: block;
+  font-family: 'heading-serif', serif;
+  font-size: 3em;
+  height: 0;
+  margin: 22px 3pt;
+}
+
+#exprimo fieldset:first-of-type {
+  border-bottom-width: 26px;
+}
+
+#join fieldset:first-of-type {
+  border-bottom-width: 23px;
+}
+
+#login fieldset:first-of-type {
+  border-bottom-width: 99px;
+}
+
+#persona {
+  margin-top: 0;
+}
+
+#persona dl:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+#persona dl dd {
+  float: right;
+  width: 66%;
+}
+
+#persona dl dt {
+  box-sizing: border-box;
+  clear: both;
+  float: left;
+  padding-right: 22px;
+  width: 33%;
+}
+
+#persona figcaption {
+  background-color: rgb(231, 231, 231);
+  margin-top: 22pt;
+  padding: 22px;
+}
+
+#persona figure {
+  background-color: rgb(242, 242, 242);
+  margin-bottom: 22pt;
+  padding-top: 22pt;
+}
+
+#persona img {
+  display: block;
+  margin: 0 auto;
+}
+
+#slash {
+  margin-bottom: 22pt;
+}
+
+#slash form {
+  text-align: center;
+}
+
+#slash input {
+  color: rgb(154, 154, 154);
+  text-indent: 3pt;
+  width: 50%;
+}
+
+#slash input,
+#slash label {
+  font-size: 22pt;
+  line-height: 33pt;
+}
+
+.loading,
+.loading:after,
+.loading:before {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  -webkit-animation: loading 1s infinite ease-in-out;
+}
+
+.loading {
+  margin: 2em auto;
+  font-size: 4px;
+  position: relative;
+  -webkit-animation-delay: 0.15s;
+}
+
+.loading:after {
+  left: 2em;
+  -webkit-animation-delay: 0.30s;
+}
+
+.loading:before {
+  left: -2em;
+}
+
+.loading:after,
+.loading:before {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+

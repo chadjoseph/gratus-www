@@ -1,0 +1,17 @@
+<section id="slash">
+  <form data-ng-controller="SlashController"
+        data-ng-submit="submit()"
+        name="form"
+        novalidate>
+    <label for="input">/</label>
+    <input autocomplete="off"
+           data-ng-model="model.slash"
+           data-ng-pattern="/^[:]?[a-zA-Z0-9]{1,179}$/"
+           id="input"
+           name="slash"
+           placeholder="{{::model.placeholder || 'expressiōnēs'}}"
+           type="text"
+           autofocus>
+  </form>
+</section>
+

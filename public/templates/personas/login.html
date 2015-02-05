@@ -1,0 +1,43 @@
+<section id="login">
+  <form data-gratus-blur-on="form.submitted"
+        data-ng-submit="submit()"
+        name="form"
+        novalidate>
+    <fieldset>
+      <input autocapitalize="off"
+             autocomplete="off"
+             autocorrect="off"
+             data-gratus-authorized
+             data-ng-class="{message:personaMessage()}"
+             data-ng-model="model.persona"
+             data-ng-model-options="{ debounce: { default: 500, blur: 0 } }"
+             name="persona"
+             placeholder="persona"
+             type="text"
+             required>
+      <input data-ng-class="{message:passwordMessage()}"
+             data-ng-model="model.password"
+             data-ng-model-options="{ debounce: { default: 500, blur: 0 } }"
+             name="password"
+             placeholder="password"
+             type="password"
+             required>
+    </fieldset>
+    <fieldset>
+      <ul data-ng-if="messages()">
+        <li data-ng-if="personaMessage()"
+            data-ng-messages="form.persona.$error"
+            data-ng-messages-include="templates/messages/persona.html">
+        </li>
+        <li data-ng-if="passwordMessage()"
+            data-ng-messages="form.password.$error"
+            data-ng-messages-include="templates/messages/password.html">
+        </li>
+      </ul>
+      <button data-ng-if="!messages()" type="submit">
+        login
+      </button>
+    </fieldset>
+  </form>
+</section>
+

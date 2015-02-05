@@ -1,0 +1,26 @@
+{
+  "name": "gratus-www",
+  "version": "0.0.1",
+  "description": "An experiment in social gratitude.",
+  "author": "Chad Joseph Brown",
+  "private": false,
+  "main": "server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chadjoseph/gratus-www.git"
+  },
+  "dependencies": {
+    "gulp": "~3.6.2",
+    "gulp-concat": "~2.2.0",
+    "gulp-minify-css": "~0.3.4",
+    "gulp-uglify": "~0.3.0",
+    "koa": "~0.5.5",
+    "koa-static": "~1.4.3"
+  },
+  "engines": {
+    "node": "~0.11.12"
+  },
+  "scripts": {
+    "start": "node --harmony server/serve"
+  }
+}
